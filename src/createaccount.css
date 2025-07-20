@@ -1,0 +1,215 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.create-account-page {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: white;
+}
+
+.left-panel {
+  width: 50%;
+  height: auto;
+  display: none;
+  position: relative;
+  background-color: #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .left-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.left-panel .base-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-panel .overlay-images {
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  color: #ffff;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: auto;
+  z-index: 2;
+}
+
+.left-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.right-panel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .right-panel {
+    width: 50%;
+  }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes verticalFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.create-account-card {
+  position: relative;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.create-account-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 100%;
+  background: #051548;
+  border-radius: 1rem;
+  z-index: 1;
+  animation: fadeSlideIn 1s ease-out forwards;
+  animation: glowFadeIn 1s ease-out forwards;
+}
+
+.create-account-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 50%;
+  background: linear-gradient(to bottom, #051548, transparent);
+  border-radius: 1rem;
+  z-index: 1;
+  animation: glowFadeIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.create-account-card .right-border {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 50%;
+  background: linear-gradient(to bottom, #051548, transparent);
+  border-radius: 1rem;
+  z-index: 1;
+  animation: glowFadeIn 1s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+@keyframes glowFadeIn {
+  0% {
+    opacity: 0;
+    box-shadow: none;
+    transform: translateY(-12px);
+  }
+  70% {
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(5, 21, 72, 0.4);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: none;
+    transform: translateY(0);
+  }
+}
+
+.create-account-card p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.create-account-card h2 {
+  text-align: center;
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.create-account-card h4 {
+    text-align: center;
+}
+
+.create-account-card label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #051548;
+}
+
+.create-account-card input {
+  width: 90%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.create-account-card input:focus {
+  border-color: #051548;
+  box-shadow: 0 0 0 2px rgba(6, 35, 70, 0.5);
+}
+
+.create-account-card button {
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  display: block;
+  background-color: #040822;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.create-account-card button:hover {
+  background-color: #000000;
+}

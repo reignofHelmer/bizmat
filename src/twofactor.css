@@ -1,0 +1,135 @@
+.twofa-page {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.twofa-card {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.twofa-card h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.twofa-card h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #051548;
+}
+
+.progress-bar-container {
+  margin: 1rem 0;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 0.5rem;
+}
+
+.progress {
+  background-color: #051548;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.logo-upload-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.logo-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  color: #051548;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-button {
+  padding: 0.5rem 1rem;
+  background-color: #051548;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.upload-button:hover {
+  background-color: #000;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+.row {
+  display: flex;
+  gap: 3rem;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #051548;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #051548;
+  box-shadow: 0 0 0 2px rgba(5, 21, 72, 0.2);
+}
+
+.continue-button {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #051548;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.continue-button:hover {
+  background-color: #000;
+}
