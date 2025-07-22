@@ -74,22 +74,6 @@ const TwoFactorNext = () => {
               {connected.outlook ? "Connected" : "Connect with Microsoft"}
             </button>
           </div>
-
-          <div className="calendar-card full-width">
-            <div className="card-header">
-              <input
-                type="checkbox"
-                checked={connected.apple}
-                readOnly
-              />
-              <h3>Apple Calendar (iCloud)</h3>
-            </div>
-            <input type="email" placeholder="iCloud Email" />
-            <input type="password" placeholder="Apple Password" />
-            <button onClick={() => toggleConnect("apple")}>
-              {connected.apple ? "Connected" : "Connect"}
-            </button>
-          </div>
         </div>
         <button
           className="continue-button"

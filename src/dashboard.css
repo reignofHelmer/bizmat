@@ -163,7 +163,7 @@ html, body {
 
 /* === ACTION CARD === */
 .action-card {
-  width: 100%;
+  width: 95%;
   background-color: #22C55E;
   border: 1px solid #e5e7eb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -178,6 +178,7 @@ html, body {
 
 .action-text h2 {
   font-size: 1.5rem;
+  margin-top: 10px;
   margin-bottom: 0.25rem;
   color: #111827;
 }
@@ -219,7 +220,7 @@ html, body {
 /* === SECTION CONTAINERS === */
 .container-two {
   max-width: 1200px;
-  margin: 0 auto;
+  margin-top: -55px;
   padding: 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -233,20 +234,22 @@ h2 {
 /* === GRID CARDS === */
 .action-grid-two {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 15px;
-  margin-bottom: 40px;
+  align-items: start;
 }
 
-.action-card-two {
+.action-card-two {  
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
+  width: 75%;
   padding: 15px;
   font-size: 14px;
   color: #444;
   position: relative;
   transition: box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .action-card-two a {
@@ -310,11 +313,11 @@ h2 {
   color: #888;
 }
 
-/* === CURRENCY SELECT === */
 .currency-select {
-  align-self: start;
-  justify-self: start;
-  margin-top: 5px;
+    display: flex;
+    justify-content: space-between; /* or 'flex-start' or 'center' */
+    gap: 520px; /* spacing between items */
+    margin-top: 15px;
 }
 
 
@@ -322,6 +325,129 @@ h2 {
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 14px;
+  margin-bottom: auto;
+  font-size: 16px;
   background-color: #fff;
+}
+
+.calendar-section {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.calendar-snapshot {
+  flex: 2;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.snapshot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.snapshot-header a {
+  color: #5e6ad2;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.snapshot-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.snapshot-table th,
+.snapshot-table td {
+  text-align: left;
+  padding: 18px 8px;
+  font-size: 14px;
+}
+
+.snapshot-table th {
+  background: #f8f8f8;
+  font-weight: 600;
+  color: #444;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.completed {
+  background-color: #d1f7d6;
+  color: #22aa3b;
+}
+
+.status.pending {
+  background-color: #fff2cc;
+  color: #d99e13;
+}
+
+.status.cancelled {
+  background-color: #fddede;
+  color: #e05151;
+}
+
+.pending-actions {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.action-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.action-btn {
+  padding: 10px 12px;
+  background: #e6e6e6;
+  border: none;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.action-btn.green {
+  background: #25c964;
+  color: white;
+}
+
+.amount {
+  font-weight: bold;
+  text-align: end;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.see-all {
+  margin-top: auto;
+  font-size: 13px;
+  text-decoration: none;
+  color: #555;
 }
