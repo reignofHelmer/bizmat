@@ -6,6 +6,7 @@ import {
   FaRobot, FaBoxes, FaSlidersH,
   FaCreditCard, FaQuestionCircle,
 } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
@@ -30,46 +31,46 @@ const Dashboard = () => {
       <div className="dashboard-container">
         <aside className="sidebar">
           <div className="sidebar-section top">
-            <button className="sidebar-btn active">
+            <Link to="/dashboard" className="sidebar-btn active">
               <FaHome />
               <span>Dashboard</span>
-            </button>
+            </Link>
           </div>
 
           <div className="sidebar-section">
             <p className="section-title">MAIN</p>
-            <button className="sidebar-btn">
+            <Link to="/bookings" className="sidebar-btn">
               <FaCalendarAlt />
               <span>Bookings & Calendar</span>
-            </button>
-            <button className="sidebar-btn">
+            </Link>
+            <Link to="/invoices" className="sidebar-btn">
               <FaFileInvoice />
               <span>Clients & Invoices</span>
-            </button>
-            <button className="sidebar-btn">
+            </Link>
+            <Link to="/aimessaging" className="sidebar-btn">
               <FaRobot />
               <span>AI Assistant & Messaging</span>
-            </button>
-            <button className="sidebar-btn">
+            </Link>
+            <Link to="/inventory" className="sidebar-btn">
               <FaBoxes />
               <span>Inventory</span>
-            </button>
+            </Link>
           </div>
 
           <div className="sidebar-section">
             <p className="section-title">SUPPORT & PEOPLE</p>
-            <button className="sidebar-btn">
+            <Link to="/preferences" className="sidebar-btn">
               <FaSlidersH />
               <span>App Preferences</span>
-            </button>
-            <button className="sidebar-btn">
+            </Link>
+            <Link to="/subscription" className="sidebar-btn">
               <FaCreditCard />
               <span>Billing & Subscription</span>
-            </button>
-            <button className="sidebar-btn">
+            </Link>
+            <Link to="/support" className="sidebar-btn">
               <FaQuestionCircle />
               <span>Support & Help</span>
-            </button>
+            </Link>
           </div>
         </aside>
 

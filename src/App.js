@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CreateAccount from "./CreateAccount";
-import Verify from "./Verify";
-import LoginPage from "./LoginPage";
-import ForgotPassword from "./ForgotPassword";
-import NewPassword from "./NewPassword";
-import TwoFactor from "./TwoFactor";
-import TwoFactorNext from "./TwoFactorNext";
-import Dashboard from "./Dashboard";
-
+import CreateAccount from "./create/CreateAccount";
+import Verify from "./create/Verify";
+import LoginPage from "./create/LoginPage";
+import ForgotPassword from "./create/ForgotPassword";
+import NewPassword from "./create/NewPassword";
+import TwoFactor from "./create/TwoFactor";
+import TwoFactorNext from "./create/TwoFactorNext";
+import Dashboard from "./pages/Dashboard";
+import Bookings from './pages/Bookings';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         <Route path="/twofactor" element={<TwoFactor />} />
         <Route path="/twofactornext" element={<TwoFactorNext />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/bookings" element={<Bookings />} />
       </Routes>
     </Router>
   );
