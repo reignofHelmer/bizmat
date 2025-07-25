@@ -5,7 +5,7 @@ import {
   FaHome, FaCalendarAlt, FaFileInvoice,
   FaRobot, FaBoxes, FaSlidersH,
   FaCreditCard, FaQuestionCircle,
-  FaGoogle, FaMicrosoft, FaApple, 
+  FaGoogle, FaMicrosoft, 
 } from "react-icons/fa";
 import { FiMoreHorizontal, FiPlus } from 'react-icons/fi';
 import { Link } from 'react-router-dom';

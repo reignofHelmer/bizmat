@@ -9,6 +9,8 @@ import TwoFactor from "./create/TwoFactor";
 import TwoFactorNext from "./create/TwoFactorNext";
 import Dashboard from "./pages/Dashboard";
 import Bookings from './pages/Bookings';
+import Invoices from './pages/Invoices';
+import Aimessaging from './pages/Aimessaging';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/twofactornext" element={<TwoFactorNext />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/bookings" element={<Bookings />} />
+        <Route path="/invoices" element={<Invoices />} />
+        <Route path="/aimessaging" element={<Aimessaging />} />
       </Routes>
     </Router>
   );
