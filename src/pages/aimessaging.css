@@ -201,8 +201,9 @@ html, body {
   height: 100%;
 }
 
-.top-cahrt {
+.top-chart {
   flex: 1;
+  margin-top: 9.8rem;
   background: white;
   border-radius: 12px;
   padding: 1.2rem;
@@ -214,6 +215,7 @@ html, body {
 
 /* Left Panel */
 .left-panel {
+  /* width: 50%; */
   flex: 1;
   background: white;
   border-radius: 12px;
@@ -221,11 +223,12 @@ html, body {
   box-shadow: 0 0 8px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 /* Status Section */
 .status-section {
-    margin-top: 5rem;
+    margin-top: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -273,6 +276,7 @@ html, body {
 
 /* Message Section */
 .message-section h4 {
+  margin-top: 20rem;
   margin: 1rem 0 0.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -361,19 +365,18 @@ html, body {
 
 /* Right Panel - Chat */
 .right-panel {
-  flex: 2;
-  background: white;
+  flex: 3;
+  background: rgb(255, 255, 255);
   border-radius: 12px;
   padding: 1rem;
   display: flex;
-  flex-direction: column;
   box-shadow: 0 0 8px rgba(0,0,0,0.05);
 }
 
 .chat-header {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   margin-bottom: 1rem;
 }
 
@@ -389,7 +392,7 @@ html, body {
   margin-left: 0.5rem;
   font-size: 1.2rem;
   cursor: pointer;
-  color: #666;
+  color: #bec8be;
 }
 
 /* Chat Body */
