@@ -12,6 +12,7 @@ import Bookings from './pages/Bookings';
 import Invoices from './pages/Invoices';
 import Aimessaging from './pages/Aimessaging';
 import Inventory from './pages/Inventory';
+import Subscription from './pages/Subscription';
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/invoices" element={<Invoices />} />
         <Route path="/aimessaging" element={<Aimessaging />} />
-        <Route path="/inventory" element={<Inventory />} />
+        <Route path="/subscription" element={<Subscription />} />
+
       </Routes>
     </Router>
   );
