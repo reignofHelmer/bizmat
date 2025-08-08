@@ -238,7 +238,7 @@ html, body {
 }
 
 .plan-card:hover {
-  background: #000;
+  background: #575757;
   color: white;
   transition: background 0.3s ease;
 }
@@ -264,7 +264,7 @@ html, body {
 }
 
 .plan-card.selected {
-  background: #1c1c1c;
+  background: #575757;
   color: white;
 }
 

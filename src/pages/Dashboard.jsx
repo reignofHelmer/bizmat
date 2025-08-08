@@ -105,7 +105,7 @@ const Dashboard = () => {
                   <a href="#">View All →</a>
                 </div>
                 <div className="action-card-two">
-                  Bookings Need Confirmation <br /> <br />
+                  Bookings Need Confirmation <br /> <br /> <br />
                   <a href="#">View All →</a>
                 </div>
                 <div className="action-card-two">

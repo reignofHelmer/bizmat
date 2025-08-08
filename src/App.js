@@ -13,6 +13,12 @@ import Invoices from './pages/Invoices';
 import Aimessaging from './pages/Aimessaging';
 import Inventory from './pages/Inventory';
 import Subscription from './pages/Subscription';
+import Preferences from './pages/preferences/Preferences';
+import Messaging from './pages/preferences/Messaging';
+import Notification from './pages/preferences/Notification';
+import Workflow from './pages/preferences/Workflow';
+import Branding from './pages/preferences/Branding';
+import Advanced from "./pages/preferences/Advanced";
 
 function App() {
   return (
@@ -29,8 +35,14 @@ function App() {
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/invoices" element={<Invoices />} />
         <Route path="/aimessaging" element={<Aimessaging />} />
+        <Route path="/inventory" element={<Inventory />} />
         <Route path="/subscription" element={<Subscription />} />
-
+        <Route path="/preferences" element={<Preferences />} />
+        <Route path="/messaging" element={<Messaging />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/workflow" element={<Workflow />} />
+        <Route path="/branding" element={<Branding />} />
+        <Route path="/advanced" element={<Advanced />} />
       </Routes>
     </Router>
   );

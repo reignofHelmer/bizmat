@@ -47,7 +47,7 @@
   background-color: white;
   border-radius: 1rem;
   padding: 2.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   z-index: 0;
   width: 100%;
@@ -67,33 +67,6 @@
 .verify-card h4 {
   text-align: center;
   margin-bottom: 0.5rem;
-}
-
-
-.verify-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 8px;
-  width: 100%;
-  background: #051548;
-  border-radius: 1rem;
-  z-index: 1;
-  animation: fadeSlideIn 1s ease-out forwards;
-}
-
-.verify-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 6px;
-  height: 50%;
-  background: linear-gradient(to bottom, #051548, transparent);
-  border-radius: 1rem;
-  z-index: 1;
-  animation: glowFadeIn 1s ease-out forwards;
 }
 
 .otp-inputs {
