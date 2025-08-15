@@ -142,266 +142,140 @@ html, body {
 }
 
 /* === MAIN CONTENT === */
-.assistant-container {
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
-  font-family: 'Inter', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-.assistant-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.assistant-header h2 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.assistant-header p {
-  font-size: 14px;
-  color: #888;
-}
-
-.sync-buttons {
-  display: flex;
-  gap: 12px;
-}
-
-.btn {
-  padding: 8px 14px;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  border: none;
-}
-
-.btn.green {
-  background-color: #1fd067;
-  color: white;
-}
-
-.btn.green-outline {
-  background-color: transparent;
-  color: #1fd067;
-  border: 1px solid #1fd067;
-}
-
-.assistant-body {
-  display: flex;
-  gap: 24px;
-}
-
-/* Left Panel */
-.left-panel {
-  flex: 0.4;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* Right Panel */
-.right-panel {
-  flex: 0.6;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
-}
-
-/* Status Section */
-.status-section {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
-}
-
-.status-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-
-.dot {
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.green {
-  background-color: #1fd067;
-}
-
-.last-sync {
-  margin-left: auto;
-  font-size: 12px;
-  color: #aaa;
-}
-
-.metrics {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
-}
-
-.metrics div {
-  text-align: center;
-  font-size: 12px;
-}
-
-.metrics strong {
-  display: block;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-/* Message Section */
-.message-section {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+.main-content {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.message-section h4 {
-  margin-bottom: 12px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.search-input {
-  padding: 10px 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-
-.tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.tabs button {
-  padding: 6px 12px;
-  border: none;
-  background: #f0f0f0;
-  border-radius: 6px;
-  font-size: 13px;
-  cursor: pointer;
-  color: #555;
-}
-
-.tabs .active {
-  background-color: #1fd067;
-  color: white;
-}
-
-/* Message List */
-.message-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  padding: 20px;
   overflow-y: auto;
-  max-height: 360px;
 }
 
-.message-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.avatar-circle {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #d1f5e3;
-}
-
-.message-details {
-  flex-grow: 1;
-}
-
-.name {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.preview {
-  font-size: 13px;
-  color: #777;
-}
-
-.date {
-  font-size: 12px;
-  color: #aaa;
-}
-
-/* Chat Panel */
-.chat-header {
+.bookings-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
-.chat-header h4 {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.chat-actions button {
-  background: none;
+.add-booking-btn {
+  background: #23ce6b;
+  color: white;
   border: none;
-  font-size: 18px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-left: 10px;
+  font-size: 14px;
 }
 
-.chat-body {
-  flex-grow: 1;
-  background-color: #f7f7f7;
+.add-booking-btn:hover {
+  background: #1fa85a;
+}
+
+.calendar-snapshot {
+  background: white;
+  padding: 20px;
   border-radius: 10px;
-  padding: 12px;
-  margin-bottom: 12px;
-  overflow-y: auto;
+  margin-bottom: 20px;
 }
 
-.chat-input {
+.snapshot-header {
   display: flex;
-  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.chat-input input {
-  flex: 1;
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+.see-transactions {
   font-size: 14px;
+  color: #23ce6b;
 }
 
-.send-btn {
-  background-color: #1fd067;
-  color: white;
+.snapshot-tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tab-btn {
+  background: #f5f5f5;
   border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
   cursor: pointer;
+}
+
+.snapshot-table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+.snapshot-table th, .snapshot-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.calendar-right {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sync-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.connected {
+  color: #23ce6b;
+}
+
+.connect-btn {
+  color: #23ce6b;
+  cursor: pointer;
+}
+
+.calendar-view {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.calendar-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.calendar-controls button {
+  background: #f5f5f5;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.calendar-controls button.active {
+  background: #23ce6b;
+  color: white;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-cell {
+  height: 80px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

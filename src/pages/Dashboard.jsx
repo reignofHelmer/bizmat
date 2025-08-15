@@ -101,7 +101,7 @@ const Dashboard = () => {
                 </div>
                 <div className="action-card-two">
                   Follow up with Fatima <br /> 
-                  (missed appointment yesterday) <br />
+                  (missed appointment yesterday) <br /> <br />
                   <a href="#">View All →</a>
                 </div>
                 <div className="action-card-two">

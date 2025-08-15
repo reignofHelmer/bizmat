@@ -5,15 +5,15 @@ import {
   FaHome, FaCalendarAlt, FaFileInvoice,
   FaRobot, FaBoxes, FaSlidersH,
   FaCreditCard, FaQuestionCircle,
-  FaGoogle, FaMicrosoft, 
+  FaGoogle, FaMicrosoft
 } from "react-icons/fa";
 import { FiMoreHorizontal, FiPlus } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
-
 const Bookings = () => {
   return (
     <div>
+      {/* === HEADER === */}
       <header className="top-header">
         <div className="logo">
           <img src="/bizlogob.png" alt="Bizmoze Logo" />
@@ -31,7 +31,9 @@ const Bookings = () => {
         </div>
       </header>
 
+      {/* === LAYOUT === */}
       <div className="dashboard-container">
+        {/* === SIDEBAR === */}
         <aside className="sidebar">
           <div className="sidebar-section top">
             <Link to="/dashboard" className="sidebar-btn">
@@ -77,108 +79,80 @@ const Bookings = () => {
           </div>
         </aside>
 
+        {/* === MAIN CONTENT === */}
         <div className="main-content">
-            <div className="page-header">
-              <div>
-              <h2>Bookings Overview</h2>
-              <p>All your appointments and orders in one place.</p>
-              </div>
-              <button className="green-btn">
-                <FiPlus /> Add New Booking
-              </button>
+          <div className="bookings-header">
+            <h2>Bookings Overview</h2>
+            <button className="add-booking-btn">
+              <FiPlus /> Add New Booking
+            </button>
+          </div>
+
+          {/* === CALENDAR SNAPSHOT === */}
+          <div className="calendar-snapshot">
+            <div className="snapshot-header">
+              <h3>Calendar Snapshot</h3>
+              <Link to="#" className="see-transactions">See all Transactions</Link>
             </div>
-
-            <div className="calendar-overview">
-              <div className="calendar-left">
-                <div className="calendar-card">
-                  <div className="card-header">
-                    <h4>Calendar Snapshot</h4>
-                    <a href="#">See All Transactions</a>
-                  </div>
-                  <div className="calendar-tabs">
-                    {['All', 'Pending', 'Confirmed', 'Missed', 'Completed', 'Cancelled'].map((tab) => (
-                      <button key={tab} className="tab-btn">{tab}</button>
-                    ))}
-                  </div>
-                  <table className="calendar-table">
-                    <thead>
-                      <tr>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Client</th>
-                        <th>Service</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {[1, 2, 3].map((i) => (
-                        <tr key={i}>
-                          <td>June 3</td>
-                          <td>10:00 AM</td>
-                          <td>Ifeanyi O.</td>
-                          <td>Haircut</td>
-                          <td><FiMoreHorizontal /></td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div className="calendar-right">
-                <div className="calendar-card">
-                  <h4>External Calendar Sync</h4>
-                  <p>Sync your schedule from other platforms.</p>
-                  <div className="calendar-sync">
-                    <div className="sync-option connected">
-                      <FaGoogle /> Google Calendar
-                      <span>Connected</span>
-                    </div>
-                    <div className="sync-option">
-                      <FaMicrosoft /> Microsoft Outlook
-                      <span>Connect</span>
-                    </div>
-                  </div>
-                  <a href="#" className="see-all">SEE ALL CUSTOMERS &rarr;</a>
-                </div>
-              </div>
+            <div className="snapshot-tabs">
+              {["All", "Pending", "Confirmed", "Missed", "Completed", "Cancelled"].map((tab, idx) => (
+                <button key={idx} className="tab-btn">{tab}</button>
+              ))}
             </div>
-
-            <div className="calendar-view">
-              <h4>Calendar View</h4>
-              <p>Visualize your weekly or monthly schedule</p>
-              <div className="calendar-controls">
-                <div>
-                  <button className="tab-btn">Day</button>
-                  <button className="tab-btn">Week</button>
-                  <button className="tab-btn active">Month</button>
-                  <button className="tab-btn">Year</button>
-                </div>
-                <div>
-                  <button className="outline-btn">Events</button>
-                  <button className="outline-btn">Select dates</button>
-                  <button className="outline-btn">Favourites</button>
-                </div>
-                <div className="calendar-month">
-                  <span>July, 2025</span>
-                  <button>{'<'}</button>
-                  <button>{'>'}</button>
-                </div>
-              </div>
-
-              <div className="calendar-grid">
-                {[...Array(7)].map((_, i) => (
-                  <div key={i} className="day-name">{['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][i]}</div>
+            <table className="snapshot-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Client</th>
+                  <th>Service</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[1, 2, 3].map((_, i) => (
+                  <tr key={i}>
+                    <td>June 3</td>
+                    <td>10:00 AM</td>
+                    <td>Ikanyi O.</td>
+                    <td>Haircut</td>
+                    <td><FiMoreHorizontal /></td>
+                  </tr>
                 ))}
+              </tbody>
+            </table>
+          </div>
 
-                {[...Array(35)].map((_, i) => (
-                  <div key={i} className={`day-cell ${i === 9 ? 'has-booking' : ''}`}>
-                    <span>{(i + 27) % 31 + 1}</span>
-                    {i === 9 && <div className="booking-tag">Booking Meetings</div>}
-                  </div>
-                ))}
-              </div>
+          {/* === RIGHT SIDEBAR CALENDAR SYNC === */}
+          <div className="calendar-right">
+            <h3>External Calendar Sync</h3>
+            <p>Sync your schedule to other platforms.</p>
+            <div className="sync-option">
+              <FaGoogle /> Google Calendar <span className="connected">Connected</span>
             </div>
+            <div className="sync-option">
+              <FaMicrosoft /> Microsoft Outlook <span className="connect-btn">Connect</span>
+            </div>
+            <div className="sync-option">
+              <FaCalendarAlt /> Apple Calendar (iCloud) <span className="connect-btn">Connect</span>
+            </div>
+          </div>
+
+          {/* === CALENDAR VIEW === */}
+          <div className="calendar-view">
+            <h3>Calendar View</h3>
+            <div className="calendar-controls">
+              <button>Day</button>
+              <button>Week</button>
+              <button className="active">Month</button>
+            </div>
+            <div className="calendar-grid">
+              {/* You can use a real calendar library here later */}
+              {Array.from({ length: 35 }).map((_, idx) => (
+                <div key={idx} className="calendar-cell">{idx + 1}</div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

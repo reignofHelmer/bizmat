@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './aimessaging.css';
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
@@ -9,11 +9,36 @@ import {
 import { Link } from 'react-router-dom';
 
 const Aimessaging = () => {
+  const [selectedMessage, setSelectedMessage] = useState(null);
+  const [activeTab, setActiveTab] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [newMessage, setNewMessage] = useState('');
+
   const messages = [
-    { name: "Uzo E.", message: "Can I reschedule my order?", date: "July 18" },
-    { name: "Chidera M.", message: "Hi, I want to book a session", date: "July 18" },
-    { name: "Amaka O.", message: "How much for...", date: "July 18" },
+    { id: 1, name: "Uzo E.", initials: "UE", message: "Can I reschedule my booking?", date: "July 18", avatar: "#4f46e5", unread: true },
+    { id: 2, name: "Chidera M.", initials: "CM", message: "Hi, I want to book a session", date: "July 18", avatar: "#059669", unread: false },
+    { id: 3, name: "Amaka O.", initials: "AO", message: "How much for...", date: "July 18", avatar: "#dc2626", unread: false },
+    { id: 4, name: "Amaka O.", initials: "AO", message: "How much for...", date: "July 18", avatar: "#dc2626", unread: false },
+    { id: 5, name: "Adanna O.", initials: "AD", message: "Okay, thank you!", date: "July 18", avatar: "#7c3aed", unread: false }
   ];
+
+  const tabs = ['All', 'Unread', 'Archived'];
+  const stats = [
+    { label: 'INTERACTIONS', value: '3' },
+    { label: 'BOOKINGS', value: '12' },
+    { label: 'INVOICES', value: '5' }
+  ];
+
+  const handleMessageClick = (message) => {
+    setSelectedMessage(message);
+  };
+
+  const handleSendMessage = () => {
+    if (newMessage.trim()) {
+      // Handle sending message logic here
+      setNewMessage('');
+    }
+  };
 
   return (
     <div>
@@ -83,84 +108,154 @@ const Aimessaging = () => {
           </div>
         </aside>
 
-        {/* Main Content */}
+        {/* Main Content - WhatsApp-like Layout */}
         <div className="main-content">
-          <div className="assistant-container">
-            {/* Assistant Header */}
-            <div className="assistant-header">
-              <div>
+          <div className="messaging-container">
+            {/* Header Section */}
+            <div className="messaging-header">
+              <div className="header-left">
                 <h2>AI Assistant & Messaging</h2>
-                <p>All your appointments and orders in one place.</p>
+                <p className="subtitle">All your appointments and orders in one place.</p>
               </div>
-              <div className="sync-buttons">
-                <button className="btn green">Resend Failed Messages</button>
-                <button className="btn green-outline">Re-sync WhatsApp</button>
+              <div className="header-right">
+                <button className="action-btn primary">Resend Failed Messages</button>
+                <button className="action-btn secondary">Re-Sync Whatsapp</button>
               </div>
             </div>
 
-            {/* Assistant Layout */}
-            <div className="assistant-body">
-              {/* Left Panel */}
-              <div className="left-panel">
-                <div className="status-card">
-                  <div className="status-label">
-                    <span className="dot green"></span> Active
-                    <span className="last-sync">Last Sync 2h ago</span>
+            {/* Status and Stats Row */}
+            <div className="status-stats-row">
+              <div className="status-section">
+                <div className="status-indicator">
+                  <span className="status-dot active"></span>
+                  <span className="status-text">Active</span>
+                  <span className="time-text">Last seen: 30 min</span>
+                </div>
+              </div>
+              
+              <div className="stats-section">
+                {stats.map((stat, index) => (
+                  <div key={index} className="stat-item">
+                    <div className="stat-value">{stat.value}</div>
+                    <div className="stat-label">{stat.label}</div>
                   </div>
-                  <div className="metrics">
-                    <div><strong>3</strong><span>INTERACTIONS</span></div>
-                    <div><strong>12</strong><span>BOOKINGS</span></div>
-                    <div><strong>5</strong><span>INVOICES</span></div>
+                ))}
+              </div>
+            </div>
+
+            {/* Chat Layout - Messages List + Chat Area */}
+            <div className="chat-layout">
+              {/* Left Panel - Messages List */}
+              <div className="messages-panel">
+                <div className="messages-header">
+                  <h3>Messages</h3>
+                  <div className="message-search">
+                    <FaSearch className="search-icon" />
+                    <input 
+                      type="text" 
+                      placeholder="Search messages..." 
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
                   </div>
                 </div>
 
-                <div className="message-card">
-                  <h4>Messages</h4>
-                  <input type="text" className="search-input" placeholder="Search message..." />
-                  <div className="tabs">
-                    <button className="active">All (Primary)</button>
-                    <button>Unread</button>
-                    <button>Pinned</button>
-                  </div>
+                {/* Message Tabs */}
+                <div className="message-tabs">
+                  {tabs.map((tab) => (
+                    <button 
+                      key={tab}
+                      className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
+                      onClick={() => setActiveTab(tab)}
+                    >
+                      {tab}
+                    </button>
+                  ))}
+                </div>
 
-                  <div className="message-list">
-                    {messages.map((msg, idx) => (
-                      <div className="message-item" key={idx}>
-                        <div className="avatar-circle" />
-                        <div className="message-info">
-                          <div className="name">{msg.name}</div>
-                          <div className="preview">{msg.message}</div>
-                        </div>
-                        <div className="date">{msg.date}</div>
+                {/* Primary Chat Label */}
+                <div className="chat-section-label">
+                  Primary Chat
+                </div>
+
+                {/* Messages List */}
+                <div className="messages-list">
+                  {messages.map((message) => (
+                    <div 
+                      key={message.id} 
+                      className={`message-item ${selectedMessage?.id === message.id ? 'selected' : ''}`}
+                      onClick={() => handleMessageClick(message)}
+                    >
+                      <div className="message-avatar" style={{ backgroundColor: message.avatar }}>
+                        {message.initials}
                       </div>
-                    ))}
-                  </div>
+                      <div className="message-content">
+                        <div className="message-header">
+                          <span className="sender-name">{message.name}</span>
+                          <span className="message-date">{message.date}</span>
+                        </div>
+                        <div className="message-text">{message.message}</div>
+                      </div>
+                      {message.unread && <div className="unread-indicator"></div>}
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Right Panel */}
-              <div className="right-panel">
-                <div className="chat-header">
-                  <h4>New Chat</h4>
-                  <div className="chat-actions">
-                    <button title="Upload"><i className="icon">📎</i></button>
-                    <button title="Call"><i className="icon">📞</i></button>
+              {/* Right Panel - Chat Area */}
+              <div className="chat-area">
+                {selectedMessage ? (
+                  <>
+                    {/* Chat Header */}
+                    <div className="chat-header">
+                      <div className="chat-user-info">
+                        <div className="chat-avatar" style={{ backgroundColor: selectedMessage.avatar }}>
+                          {selectedMessage.initials}
+                        </div>
+                        <div className="chat-user-details">
+                          <span className="chat-user-name">{selectedMessage.name}</span>
+                          <span className="chat-user-status">Online</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Chat Messages */}
+                    <div className="chat-messages">
+                      <div className="chat-message received">
+                        <div className="message-bubble">
+                          {selectedMessage.message}
+                        </div>
+                        <div className="message-time">{selectedMessage.date}</div>
+                      </div>
+                    </div>
+
+                    {/* Message Input */}
+                    <div className="message-input-container">
+                      <input 
+                        type="text"
+                        placeholder="Type..."
+                        value={newMessage}
+                        onChange={(e) => setNewMessage(e.target.value)}
+                        className="message-input"
+                        onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                      />
+                      <button className="send-btn" onClick={handleSendMessage}>
+                        Send
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <div className="no-chat-selected">
+                    <div className="no-chat-content">
+                      <span className="chat-name">New Chat</span>
+                      <p>Select a message to start chatting</p>
+                    </div>
                   </div>
-                </div>
-
-                <div className="chat-body">
-                  <p className="empty-chat-text">Select a conversation to start chatting</p>
-                </div>
-
-                <div className="chat-input">
-                  <input type="text" placeholder="Chat" />
-                  <button className="send-btn">Send</button>
-                </div>
+                )}
               </div>
             </div>
           </div>
         </div>
-        {/* End of Main Content */}
       </div>
     </div>
   );

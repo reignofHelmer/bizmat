@@ -103,6 +103,7 @@ html, body {
 }
 
 .create-account-card h2 {
+  margin-top: 10px;
   text-align: center;
   font-size: 1.875rem;
   font-weight: bold;

@@ -321,7 +321,8 @@ h2 {
   align-items: center; /* Added for better alignment */
   flex-wrap: wrap; /* Added for responsive behavior */
   gap: 20px; /* CHANGED: from 520px to 20px for responsive design */
-  margin-top: 35px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .currency-select select {
