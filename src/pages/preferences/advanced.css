@@ -280,7 +280,7 @@ html, body {
 }
 
 .integration-icon.google {
-  background: #4285f4;
+  background: #22c55e;
 }
 
 .integration-icon.google::after {
@@ -288,7 +288,7 @@ html, body {
 }
 
 .integration-icon.calendly {
-  background: #006bff;
+  background: #22c55e;
 }
 
 .integration-icon.calendly::after {
@@ -296,7 +296,7 @@ html, body {
 }
 
 .integration-icon.outlook {
-  background: #0078d4;
+  background: #22c55e;
 }
 
 .integration-icon.outlook::after {
