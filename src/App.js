@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import CreateAccount from "./create/CreateAccount";
 import Verify from "./create/Verify";
 import LoginPage from "./create/LoginPage";
@@ -19,11 +19,19 @@ import Notification from './pages/preferences/Notification';
 import Workflow from './pages/preferences/Workflow';
 import Branding from './pages/preferences/Branding';
 import Advanced from "./pages/preferences/Advanced";
+import Invoicespopup from "./pages/popups/Invoicespopup";
+import Missedpopup from "./pages/popups/Missedpopup";
+import Bookpopup from "./pages/popups/Bookpopup";
+import Stockpopup from "./pages/popups/Stockpopup";
 
-function App() {
+function AppRoutes() {
+  const location = useLocation();
+  const state = location.state;
+
   return (
-    <Router>
-      <Routes>
+    <>
+      {/* Normal Routes */}
+      <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<CreateAccount />} />
         <Route path="/loginpage" element={<LoginPage />} />
         <Route path="/verify" element={<Verify />} />
@@ -44,6 +52,24 @@ function App() {
         <Route path="/branding" element={<Branding />} />
         <Route path="/advanced" element={<Advanced />} />
       </Routes>
+
+      {/* Popup Route rendered on top */}
+      {state?.backgroundLocation && (
+        <Routes>
+          <Route path="/invoicespopup" element={<Invoicespopup />} />
+          <Route path="/missedpopup" element={<Missedpopup />} />
+          <Route path="/bookpopup" element={<Bookpopup />} />
+          <Route path="/stockpopup" element={<Stockpopup />} />
+        </Routes>
+      )}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppRoutes />
     </Router>
   );
 }

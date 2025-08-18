@@ -6,9 +6,10 @@ import {
   FaRobot, FaBoxes, FaSlidersH,
   FaCreditCard, FaQuestionCircle,
 } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Dashboard = () => {
+  const location = useLocation();
   return (
     <div>
       <header className="top-header">
@@ -97,20 +98,21 @@ const Dashboard = () => {
               <div className="action-grid-two">
                 <div className="action-card-two">
                   Send reminder to 2 clients with pending payments <br /> <br />
-                  <a href="#">View All →</a>
+                  <Link to="/invoicespopup" state={{ backgroundLocation: location }}>View All →</Link>
                 </div>
                 <div className="action-card-two">
                   Follow up with Fatima <br /> 
                   (missed appointment yesterday) <br /> <br />
-                  <a href="#">View All →</a>
+                  <Link to="/missedpopup" state={{ backgroundLocation: location }}>View All →</Link>
                 </div>
                 <div className="action-card-two">
                   Bookings Need Confirmation <br /> <br /> <br />
-                  <a href="#">View All →</a>
+                  <Link to="/bookpopup" state={{ backgroundLocation: location }}>View All →</Link>
                 </div>
                 <div className="action-card-two">
                   4 Items Low on Stock <br /> <br /> <br />
-                  <a href="#">Restock →</a> <a href="#">View All →</a>
+                  <a href="#">Restock →</a>
+                  <Link to="/stockpopup" state={{ backgroundLocation: location }}>View All →</Link>
                 </div>
               </div>
               <div className="currency-select">
