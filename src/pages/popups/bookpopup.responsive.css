@@ -1,0 +1,103 @@
+/* === BOOK POPUP RESPONSIVE === */
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .book-panel {
+    width: 85vw;
+  }
+
+  .toolbar {
+    flex-wrap: wrap;
+    padding: 14px 16px 10px 56px;
+    gap: 8px;
+  }
+
+  .toolbar-search {
+    flex: 1 1 100%;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .toolbar-right {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .chip {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .book-panel {
+    width: 100vw;
+    margin-top: 0;
+    border-left: none;
+    border-radius: 0;
+  }
+
+  .close-btn {
+    top: 10px;
+    left: 10px;
+    height: 28px;
+    width: 28px;
+    font-size: 14px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 12px 8px 44px;
+  }
+
+  .toolbar-right {
+    display: none; /* hide filters/chips on small screens */
+  }
+
+  .table-card {
+    margin: 8px;
+    border-radius: 8px;
+  }
+
+  .book-table th,
+  .book-table td {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .client {
+    gap: 6px;
+  }
+
+  .avatar {
+    width: 24px;
+    height: 24px;
+  }
+
+  .send-link {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+
+/* Small Mobile adjustments */
+@media (max-width: 480px) {
+  .book-table {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .book-table th,
+  .book-table td {
+    padding: 8px 10px;
+  }
+
+  .send-link {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}

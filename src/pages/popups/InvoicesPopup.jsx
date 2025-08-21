@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./invoicespopup.css";
+import "./invoicespopup.responsive.css";
 import { useNavigate } from "react-router-dom";
 
 const rows = Array.from({ length: 18 }).map((_, i) => ({

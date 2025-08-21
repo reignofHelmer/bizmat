@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './aimessaging.css';
+import './aimessaging.responsive.css';
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
   FaHome, FaCalendarAlt, FaFileInvoice,

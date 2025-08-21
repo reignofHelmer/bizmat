@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./branding.css";
+import "./branding.responsive.css";
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
   FaHome, FaCalendarAlt, FaFileInvoice,

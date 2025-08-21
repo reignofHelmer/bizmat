@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './twofactornext.css';
+import './twofactornext.responsive.css';
 
 const TwoFactorNext = () => {
   const navigate = useNavigate();
@@ -38,6 +39,7 @@ const TwoFactorNext = () => {
               <input
                 type="checkbox"
                 checked={connected.google}
+                onChange={() => toggleConnect("google")}
                 readOnly
               />
               <h3>Google Calendar</h3>
@@ -52,7 +54,7 @@ const TwoFactorNext = () => {
               <input
                 type="checkbox"
                 checked={connected.calendly}
-                readOnly
+                onChange={() => toggleConnect("calendly")}
               />
               <h3>Calendly</h3>
             </div>
@@ -66,6 +68,7 @@ const TwoFactorNext = () => {
               <input
                 type="checkbox"
                 checked={connected.outlook}
+                onChange={() => toggleConnect("outlook")}
                 readOnly
               />
               <h3>Microsoft Outlook</h3>

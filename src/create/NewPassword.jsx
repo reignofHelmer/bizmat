@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./newpassword.css";
+import "./newpassword.responsive.css";
 
 const NewPassword = () => {
   const navigate = useNavigate();

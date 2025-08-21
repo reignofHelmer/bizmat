@@ -1,0 +1,162 @@
+/* ===========================
+   notification.responsive.css
+   =========================== */
+
+/* Extra small devices (≤ 576px) */
+@media (max-width: 576px) {
+  .top-header {
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+    height: auto;
+  }
+
+  .logo img {
+    height: 32px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .header-icons {
+    margin-top: 0.5rem;
+    gap: 1rem;
+  }
+
+  .dashboard-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .sidebar-btn span {
+    font-size: 0.8rem;
+  }
+
+  .preferences-container {
+    flex-direction: column;
+  }
+
+  .preferences-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .main-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .form-group input {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .toggle-switch {
+    margin-left: 0;
+  }
+}
+
+/* Small to Medium devices (577px – 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .sidebar {
+    width: 30%;
+    max-width: 30%;
+    padding: 15px;
+  }
+
+  .main-content {
+    width: 70%;
+    padding: 1.5rem;
+  }
+
+  .preferences-sidebar {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .main-content h2 {
+    font-size: 1.35rem;
+  }
+
+  .form-group input {
+    width: 80%;
+  }
+
+  .toggle-switch {
+    margin-left: 1rem;
+  }
+}
+
+/* Medium to Large devices (769px – 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .sidebar {
+    width: 25%;
+    max-width: 25%;
+  }
+
+  .main-content {
+    width: 75%;
+    padding: 2rem;
+  }
+
+  .main-content h2 {
+    font-size: 1.45rem;
+  }
+
+  .form-group input {
+    width: 70%;
+  }
+
+  .toggle-switch {
+    margin-left: 2rem;
+  }
+}
+
+/* Large to Extra-large devices (993px – 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .sidebar {
+    width: 22%;
+  }
+
+  .main-content {
+    width: 78%;
+  }
+
+  .main-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* XXL devices (1201px and up) */
+@media (min-width: 1201px) {
+  .sidebar {
+    width: 20%;
+  }
+
+  .main-content {
+    width: 80%;
+  }
+
+  .main-content h2 {
+    font-size: 1.6rem;
+  }
+}

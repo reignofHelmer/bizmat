@@ -1,0 +1,156 @@
+/* createaccount.responsive.css */
+
+/* For small devices (phones, <576px) */
+@media (max-width: 575.98px) {
+  .create-account-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .left-panel {
+    display: none; /* hide illustration on very small screens */
+  }
+
+  .right-panel {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .create-account-card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .create-account-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .create-account-card h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .create-account-card input {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .create-account-card button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .create-account-card p {
+    font-size: 0.8rem;
+  }
+}
+
+/* For medium devices (≥576px and <768px, landscape phones / small tablets) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .create-account-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: auto;
+  }
+
+  .left-panel {
+    display: none;
+  }
+
+  .right-panel {
+    max-width: 90%;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .create-account-card {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .create-account-card h2 {
+    font-size: 1.75rem;
+  }
+
+  .create-account-card input {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+/* For tablets (≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .create-account-page {
+    flex-direction: row;
+  }
+
+  .left-panel {
+    width: 40%;
+    display: flex;
+  }
+
+  .right-panel {
+    width: 60%;
+    max-width: 60%;
+    padding: 2rem;
+  }
+
+  .create-account-card {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .create-account-card h2 {
+    font-size: 2rem;
+  }
+
+  .create-account-card h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* For laptops (≥992px and <1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .left-panel {
+    width: 45%;
+  }
+
+  .right-panel {
+    width: 55%;
+  }
+
+  .create-account-card {
+    width: 85%;
+    padding: 2.5rem;
+  }
+
+  .create-account-card h2 {
+    font-size: 2.25rem;
+  }
+}
+
+/* For desktops (≥1200px) */
+@media (min-width: 1200px) {
+  .left-panel {
+    width: 50%;
+  }
+
+  .right-panel {
+    width: 50%;
+  }
+
+  .create-account-card {
+    width: 75%;
+    padding: 3rem;
+  }
+
+  .create-account-card h2 {
+    font-size: 2.5rem;
+  }
+}

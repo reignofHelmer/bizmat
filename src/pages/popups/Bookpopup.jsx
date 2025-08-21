@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./bookpopup.css";
+import "./bookpopup.responsive.css";
 import { useNavigate } from "react-router-dom";
 
 const rows = Array.from({ length: 18 }).map((_, i) => ({

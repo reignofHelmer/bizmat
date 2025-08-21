@@ -1,0 +1,194 @@
+/* === invoices.responsive.css === */
+
+/* Large tablets & down */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .sidebar-section {
+    margin-bottom: 0;
+  }
+
+  .sidebar-btn {
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .sidebar-btn span {
+    font-size: 12px;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+
+  .summary-cards {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* Tablets & large phones */
+@media (max-width: 768px) {
+  .top-header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.75rem;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+
+  .header-icons {
+    gap: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .green-btn {
+    flex: 1;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .summary-cards {
+    flex-direction: column;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tabs button {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .table-header input[type="text"] {
+    width: 100%;
+  }
+
+  .filters {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .clients-table th,
+  .clients-table td {
+    font-size: 13px;
+    padding: 10px 6px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+  }
+
+  .sidebar-btn {
+    flex-direction: row;
+    font-size: 14px;
+  }
+
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    margin: 0.5rem 0;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .title-block h2 {
+    font-size: 1.25rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tabs button {
+    width: 100%;
+  }
+
+  .filters-tags {
+    flex-direction: column;
+  }
+
+  .tag-filter {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Make table scrollable instead of cramming columns */
+  .clients-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .clients-table th,
+  .clients-table td {
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+
+  .client-info span {
+    font-size: 13px;
+  }
+
+  .status {
+    font-size: 11px;
+    padding: 0.2rem 0.5rem;
+  }
+}

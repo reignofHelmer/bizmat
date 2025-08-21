@@ -1,0 +1,100 @@
+/* ========== verify.responsive.css ========== */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .verify-card {
+    max-width: 350px;
+    padding: 2rem;
+  }
+
+  .verify-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .verify-card h4 {
+    font-size: 1rem;
+  }
+
+  .otp-inputs {
+    gap: 0.4rem;
+  }
+
+  .otp-inputs input {
+    width: 1.8rem;
+    height: 2.2rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .verify-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .left-panel {
+    display: none; /* hide image for mobile */
+  }
+
+  .right-panel {
+    width: 100%;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .verify-card {
+    max-width: 100%;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .verify-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .verify-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .otp-inputs input {
+    width: 1.6rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .verify-card button {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .verify-card {
+    padding: 1.2rem;
+  }
+
+  .verify-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .verify-card h4 {
+    font-size: 0.85rem;
+  }
+
+  .otp-inputs {
+    gap: 0.3rem;
+    margin: 1rem 0;
+  }
+
+  .otp-inputs input {
+    width: 1.4rem;
+    height: 1.8rem;
+    font-size: 0.9rem;
+  }
+
+  .resend-text {
+    font-size: 0.7rem;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./missedpopup.css";
+import "./missedpopup.responsive.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Missedpopup() {

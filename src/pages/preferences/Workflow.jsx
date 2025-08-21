@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./workflow.css";
+import "./workflow.responsive.css";
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
   FaHome, FaCalendarAlt, FaFileInvoice,
@@ -115,7 +116,7 @@ const Workflow = () => {
 
           {/* Main Preferences Form */}
           <main className="main-content">
-            <div className="booking-workflow-section">
+            <div className="booking-workflow-container">
               <div className="section-header">
                 <h2>Booking & Workflow</h2>
                 <p>Improve service handling & prevent chaos</p>

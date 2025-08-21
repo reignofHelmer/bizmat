@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./loginpage.css";
+import "./loginpage.responsive.css";
 
 const CreateAccount = () => {
   const navigate = useNavigate();

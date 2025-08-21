@@ -1,5 +1,6 @@
 import React from "react";
 import "./preferences.css";
+import "./preferences.responsive.css";
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
   FaHome, FaCalendarAlt, FaFileInvoice,

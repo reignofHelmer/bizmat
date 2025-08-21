@@ -1,5 +1,6 @@
 import React from "react";
 import "./bookings.css";
+import "./bookings.responsive.css";
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
   FaHome, FaCalendarAlt, FaFileInvoice,

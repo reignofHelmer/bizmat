@@ -1,5 +1,6 @@
 import React from "react";
 import "./notification.css";
+import "./notification.responsive.css";
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
   FaHome, FaCalendarAlt, FaFileInvoice,

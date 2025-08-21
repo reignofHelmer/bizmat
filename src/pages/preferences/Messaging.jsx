@@ -1,5 +1,6 @@
 import React from "react";
 import "./messaging.css";
+import "./messaging.responsive.css";
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
   FaHome, FaCalendarAlt, FaFileInvoice,

@@ -1,5 +1,6 @@
 import React from "react";
 import "./inventory.css";
+import "./inventory.responsive.css";
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
   FaHome, FaCalendarAlt, FaFileInvoice,

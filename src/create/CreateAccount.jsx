@@ -1,6 +1,7 @@
 import React from "react";
 import "./createaccount.css";
 import { useNavigate } from "react-router-dom";
+import "./createaccount.responsive.css";
 
 const CreateAccount = () => {
   const navigate = useNavigate();

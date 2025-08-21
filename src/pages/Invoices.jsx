@@ -1,5 +1,6 @@
 import React from "react";
 import './invoices.css';
+import './invoices.responsive.css';
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
   FaHome, FaCalendarAlt, FaFileInvoice,

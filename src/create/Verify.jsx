@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './verify.css';
+import './verify.responsive.css';
 
 const Verify = () => {
   const inputsRef = useRef([]);

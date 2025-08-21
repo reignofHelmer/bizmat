@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./twofactor.css";
+import "./twofactor.responsive.css";
 
 const TwoFactor = () => {
   const navigate = useNavigate();

@@ -1,0 +1,148 @@
+/* === branding.responsive.css === */
+
+/* Tablet and smaller */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .sidebar-section {
+    margin-bottom: 0;
+  }
+
+  .sidebar-btn {
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .sidebar-btn span {
+    font-size: 12px;
+  }
+
+  .preferences-container {
+    flex-direction: column;
+  }
+
+  .preferences-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .branding-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Tablet / large phone */
+@media (max-width: 768px) {
+  .top-header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.75rem;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+
+  .header-icons {
+    gap: 1rem;
+  }
+
+  .page-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .upload-options {
+    flex-wrap: wrap;
+  }
+
+  .upload-dropzone {
+    width: 100px;
+    height: 100px;
+  }
+
+  .upload-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .color-picker-container {
+    flex-wrap: wrap;
+  }
+
+  .theme-options {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+/* Small phone */
+@media (max-width: 480px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+  }
+
+  .sidebar-btn {
+    flex-direction: row;
+    font-size: 14px;
+  }
+
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    margin: 0.5rem 0;
+  }
+
+  .page-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .upload-dropzone {
+    width: 80px;
+    height: 80px;
+  }
+
+  .upload-btn {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .url-input {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}

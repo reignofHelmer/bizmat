@@ -165,10 +165,9 @@
 .send-link:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(34,197,94,.25); background: #f0fff7; }
 
 /* Responsive tweak */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .stock-panel { width: 90vw; }
-  .toolbar-right { display: none; } /* keep the search on small screens */
-}
+  .toolbar-right { display: none; } } /* keep the search on small screens */
 
 /* Card + Table */
 .table-card {

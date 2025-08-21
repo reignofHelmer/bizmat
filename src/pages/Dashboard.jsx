@@ -1,5 +1,6 @@
 import React from "react";
 import "./dashboard.css";
+import "./dashboard.responsive.css";
 import {
   FaSearch, FaBell, FaClock, FaUserCircle,
   FaHome, FaCalendarAlt, FaFileInvoice,
