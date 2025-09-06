@@ -1,0 +1,281 @@
+/* === PAGE LAYOUT FIX === */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* === MAIN CONTAINER === */
+.dashboard-container {
+  display: flex;
+  height: calc(100vh - 64px); /* Adjust if header height changes */
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #999;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.sidebar-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  padding: 10px 12px;
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #222;
+  transition: background 0.2s ease;
+}
+
+.sidebar-btn:hover {
+  background: #f5f5f5;
+}
+
+.sidebar-btn svg {
+  font-size: 18px;
+}
+
+.sidebar-btn.active {
+  background: #23ce6b;
+  color: #fff;
+}
+
+.sidebar-btn.active svg {
+  color: #fff;
+}
+
+/* === TOP HEADER === */
+.top-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  z-index: 100;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  width: 50%;
+  max-width: 500px;
+}
+
+.search-bar .search-icon {
+  margin-right: 0.5rem;
+  color: #6b7280;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.header-icons .icon {
+  font-size: 1.25rem;
+  color: #4b5563;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.header-icons .icon:hover {
+  color: #000;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.bookings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-booking-btn {
+  background: #23ce6b;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-booking-btn:hover {
+  background: #1fa85a;
+}
+
+.calendar-snapshot {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.snapshot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.see-transactions {
+  font-size: 14px;
+  color: #23ce6b;
+}
+
+.snapshot-tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tab-btn {
+  background: #f5f5f5;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.snapshot-table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+.snapshot-table th, .snapshot-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.calendar-right {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sync-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.connected {
+  color: #23ce6b;
+}
+
+.connect-btn {
+  color: #23ce6b;
+  cursor: pointer;
+}
+
+.calendar-view {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.calendar-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.calendar-controls button {
+  background: #f5f5f5;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.calendar-controls button.active {
+  background: #23ce6b;
+  color: white;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-cell {
+  height: 80px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

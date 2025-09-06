@@ -1,0 +1,88 @@
+/* ---------- Laptop (≥1200px) ---------- */
+@media (min-width: 1200px) {
+  .missed-panel {
+    width: 40vw; /* give a bit more breathing space on wide screens */
+  }
+  .profile-body {
+    font-size: 14px;
+  }
+  .qa-head h4 {
+    font-size: 15px;
+  }
+}
+
+/* ---------- Tablet (768px–1199px) ---------- */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .missed-panel {
+    width: 60vw;
+  }
+  .missed-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+  }
+  .profile-body {
+    font-size: 13px;
+  }
+  .qa-head h4 {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Mobile (≤767px) ---------- */
+@media (max-width: 767px) {
+  .missed-panel {
+    width: 100vw; /* full width */
+    border-radius: 0;
+  }
+  .missed-content {
+    padding: 16px;
+  }
+  .missed-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .profile-card,
+  .activity-card {
+    border-radius: 10px;
+  }
+  .profile-body {
+    font-size: 12px;
+  }
+  .qa-head h4 {
+    font-size: 13px;
+  }
+  .schedule-btn {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+  .send-btn {
+    width: 100%;
+  }
+}
+
+/* ---------- Small Mobile (≤480px) ---------- */
+@media (max-width: 480px) {
+  .close-btn {
+    top: 10px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+  }
+  .avatar {
+    width: 48px;
+    height: 48px;
+    bottom: -24px;
+  }
+  .name {
+    font-size: 15px;
+  }
+  .company {
+    font-size: 12px;
+  }
+  .composer textarea {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}

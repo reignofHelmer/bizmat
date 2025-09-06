@@ -1,0 +1,65 @@
+/* ========== twofactornext.responsive.css ========== */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .twofactor-next-page {
+    flex-direction: column;
+  }
+
+  .twofactor-next-page .left-panel {
+    display: none; /* Hide side image on smaller screens */
+  }
+
+  .twofactor-next-page .right-panel {
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    display: flex;
+  }
+
+  .twofactor-next-card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .twofactor-next-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .twofactor-next-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .twofactor-next-card input {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .twofactor-next-card button {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .twofactor-next-card .back-link button {
+    font-size: 0.8rem;
+  }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+  .twofactor-next-card {
+    padding: 1.2rem;
+  }
+
+  .twofactor-next-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .twofactor-next-card h4 {
+    font-size: 0.85rem;
+  }
+}

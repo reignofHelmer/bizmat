@@ -1,0 +1,145 @@
+/* === messaging.responsive.css === */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Outer sidebar becomes horizontal */
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .sidebar-section {
+    margin-bottom: 0;
+  }
+
+  .sidebar-btn {
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    padding: 8px;
+    gap: 6px;
+    min-width: 90px;
+  }
+
+  .sidebar-btn span {
+    font-size: 12px;
+  }
+
+  /* Inner preferences sidebar collapses */
+  .preferences-container {
+    flex-direction: column;
+  }
+
+  .preferences-sidebar {
+    width: 100%;
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .settings-container {
+    max-width: 100%;
+    padding: 1.25rem;
+  }
+}
+
+/* Tablet / large phone */
+@media (max-width: 768px) {
+  .top-header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.75rem;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+
+  .header-icons {
+    gap: 1rem;
+  }
+
+  .settings-container h2 {
+    font-size: 1.25rem;
+  }
+
+  .subtext {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .time-range {
+    flex-wrap: wrap;
+  }
+}
+
+/* Small phone */
+@media (max-width: 480px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+  }
+
+  .sidebar-btn {
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 14px;
+    min-width: unset;
+  }
+
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    margin: 0.5rem 0;
+  }
+
+  .settings-container {
+    padding: 1rem;
+  }
+
+  .settings-container h2 {
+    font-size: 1.1rem;
+  }
+
+  .subtext {
+    font-size: 0.8rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="time"],
+  textarea {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}

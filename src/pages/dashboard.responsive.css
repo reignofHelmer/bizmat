@@ -1,0 +1,191 @@
+/* === dashboard.responsive.css === */
+
+/* Large tablets & down */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    height: auto;
+    position: relative;
+    top: 0;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .sidebar-section {
+    margin-bottom: 0;
+  }
+
+  .sidebar-btn {
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .sidebar-btn span {
+    font-size: 12px;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+
+  .calendar-section {
+    flex-direction: column;
+  }
+
+  .calendar-snapshot,
+  .pending-actions {
+    width: 100%;
+  }
+}
+
+/* Tablets & large phones */
+@media (max-width: 768px) {
+  .top-header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.75rem;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+
+  .header-icons {
+    gap: 1rem;
+  }
+
+  .action-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .action-buttons {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .action-btn {
+    flex: 1;
+    min-width: 140px;
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .action-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .container-two {
+    padding: 20px;
+  }
+
+  .currency-select {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .currency-select select {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .snapshot-table th,
+  .snapshot-table td {
+    font-size: 12px;
+    padding: 12px 6px;
+  }
+
+  .metric-card .value {
+    font-size: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+  }
+
+  .sidebar-btn {
+    flex-direction: row;
+    font-size: 14px;
+  }
+
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    margin: 0.5rem 0;
+  }
+
+  .action-card {
+    padding: 1rem;
+  }
+
+  .action-btn {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .action-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .action-text p {
+    font-size: 0.85rem;
+  }
+
+  .action-card-two,
+  .metric-card {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .metric-card .value {
+    font-size: 18px;
+  }
+
+  .snapshot-header h3 {
+    font-size: 1rem;
+  }
+
+  .snapshot-table th,
+  .snapshot-table td {
+    font-size: 11px;
+    padding: 10px 4px;
+  }
+
+  .pending-actions {
+    padding: 15px;
+  }
+
+  .action-row p {
+    font-size: 13px;
+  }
+
+  .amount {
+    font-size: 13px;
+  }
+}
